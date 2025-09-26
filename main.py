@@ -44,3 +44,16 @@ VALUES (?, ?, ?)
 (alunos)
 )
 conexao.commit()
+
+#)
+# conexao.commit()
+
+
+#Atualizar dados no banco
+cursor.execute("""
+UPDATE alunos
+SET idade = ?, curso = ?
+WHERE id = ?
+""", (61, "Medicina", 2)
+)
+conexao.commit()
